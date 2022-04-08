@@ -12,7 +12,7 @@ import regex
 purrnet = Network(height="1000px", width="100%", font_color="black",heading='Departments of each college')
 #Create a pyvis network named purrnet
 
-info = pd.read_excel("PURRSubjectTags_wColleges.xlsx") #Read info from an excel sheet
+info = pd.read_excel("C:/CS/ILSResearch/purr/PURRSubjectTags_wColleges.xlsx") #Read info from an excel sheet
 numpyinfo = info.to_numpy() #Convert info to a numpy array
 collegesdict = dict() #Create a dictionary where colleges will be the keys and departments the items
 for i in numpyinfo:
