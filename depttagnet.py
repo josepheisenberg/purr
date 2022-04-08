@@ -57,3 +57,7 @@ for j in collegesdict.keys(): #For each college
     count+=1 #Increment count
 purrnet.from_nx(graph) #Convert the networkx graph to the pyvis network
 purrnet.show("purrnet.html") #Create and show an html file with the pyvis network
+
+HtmlFile = open("purrnet.html", 'r', encoding='utf-8')
+source_code = HtmlFile.read() 
+st.componentsv1.html(source_code, height = 1000)
