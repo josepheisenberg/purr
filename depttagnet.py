@@ -49,12 +49,13 @@ for j in collegesdict.keys(): #For each college
     bignsize =20 + 3 *len(collegesdict[j]) #College node size based on number of departments
     graph.add_node(j, size=bignsize, title=j, group = count) #Add nodes for the colleges
     for k in collegesdict[j]: #For each department within college j
+        hyperlink = "<a href="+depttagsdict[k][0]+">"+k+"</a>"
         numresults = depttagsdict[k][1]
         smallnsize = 10
         if(numresults > 0):
             smallnsize += 2 + 4*numpy.log(numresults)
-        graph.add_node(k+ " ", size=smallnsize, title=depttagsdict[k][1], group=count) #Create a node for the department. The " " prevents issues with departments/colleges with the same name
-        graph.add_edge(j, k + " ", weight = 5) #Create an edge between the above department and its college
+        graph.add_node(hyperlink, size=smallnsize, title="Results: "+str(depttagsdict[k][1]), group=count) #Create a node for the department. The " " prevents issues with departments/colleges with the same name
+        graph.add_edge(j,hyperlink, weight = 5) #Create an edge between the above department and its college
     count+=1 #Increment count
 purrnet.from_nx(graph) #Convert the networkx graph to the pyvis network
 purrnet.show("purrnet.html") #Create and show an html file with the pyvis network
