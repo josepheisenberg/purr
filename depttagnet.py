@@ -1,9 +1,9 @@
-import networkx as nx
 import matplotlib.pyplot as plt
 from pyvis.network import Network
 import pandas as pd
 import streamlit as st
 import numpy
+import networkx as nx
 from bs4 import BeautifulSoup as soup
 import requests
 import regex
