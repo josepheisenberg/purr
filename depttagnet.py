@@ -53,8 +53,8 @@ for j in collegesdict.keys(): #For each college
         smallnsize = 10
         if(numresults > 0):
             smallnsize += 2 + 4*numpy.log(numresults)
-        graph.add_node(depttagsdict[k][0], size=smallnsize, title=depttagsdict[k][1], group=count) #Create a node for the department. The " " prevents issues with departments/colleges with the same name
-        graph.add_edge(j,depttagsdict[k][0], weight = 5) #Create an edge between the above department and its college
+        graph.add_node(k+ " ", size=smallnsize, title=depttagsdict[k][1], group=count) #Create a node for the department. The " " prevents issues with departments/colleges with the same name
+        graph.add_edge(j, k + " ", weight = 5) #Create an edge between the above department and its college
     count+=1 #Increment count
 purrnet.from_nx(graph) #Convert the networkx graph to the pyvis network
 purrnet.show("purrnet.html") #Create and show an html file with the pyvis network
