@@ -4,6 +4,7 @@ import pandas as pd
 import streamlit as st
 import numpy
 import networkx as nx
+import streamlit.components.v1 as components
 from bs4 import BeautifulSoup as soup
 import requests
 import regex
@@ -60,4 +61,4 @@ purrnet.show("purrnet.html") #Create and show an html file with the pyvis networ
 
 HtmlFile = open("purrnet.html", 'r', encoding='utf-8')
 source_code = HtmlFile.read() 
-st.componentsv1.html(source_code, height = 1000)
+components.html(source_code, height = 1000)
