@@ -61,4 +61,4 @@ purrnet.show("purrnet.html") #Create and show an html file with the pyvis networ
 
 HtmlFile = open("purrnet.html", 'r', encoding='utf-8')
 source_code = HtmlFile.read() 
-components.html(source_code, height = 1000)
+components.html(source_code, height = 1000, width = 1000)
