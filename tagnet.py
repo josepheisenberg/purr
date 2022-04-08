@@ -27,7 +27,7 @@ tagset = set() #create a set with every tag
 for j in tags:
     for i in j:
         tagset.add(i)
-        
+print(len(tagset))
 cleandescriptions = []
 for k in range(len(descriptions)): #clean descriptions
     desc = descriptions[k]
