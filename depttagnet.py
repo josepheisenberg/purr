@@ -26,16 +26,17 @@ depttagsdict = dict()
 for i in depttags:
     depttagsdict[i] = list()
 for i in depttagsdict.keys():
-    depttagsdict[i].append("https://purr.purdue.edu/publications/browse?tag="+i)
-    site_raw = requests.get("https://purr.purdue.edu/publications/browse?tag="+i)
+    l = regex.sub(" ", "+", i)
+    depttagsdict[i].append("https://purr.lib.purdue.edu/registry?q="+l)
+    site_raw = requests.get("https://purr.lib.purdue.edu/registry?q="+l, verify = False)
     site_soup = soup(site_raw.text, 'html.parser')
-    site_info = site_soup.find("li", {"class":"counter"})
-    results = regex.compile("(<li class=\"counter\">)\s+((Results[\s\w-]+)|(No record found\s+))(<\/li>)")
+    site_info = site_soup.find("p", {"class":"ml-2 mt-3"})
+    results = regex.compile("(<p class=\"ml-2 mt-3\">)\s*((Results[\s\w-]+)|(No record found\s+))(<\/p>)")
     match = results.search(str(site_info))
-    gtwo = match.group(3)
-    flag = True
-    if(gtwo == None):
-        gtwo = match.group(4)
+    if(match != None):
+        gtwo = match.group(3)
+        flag = True
+    else:
         flag = False
     numresults = regex.compile("of ([\d]+)")
     if(flag):
@@ -46,16 +47,17 @@ for i in depttagsdict.keys():
 graph = nx.Graph() #Create a networkx graph
 count = 1 #Keeps track of groups by college with
 for j in collegesdict.keys(): #For each college
-    bignsize =20 + 3 *len(collegesdict[j]) #College node size based on number of departments
+    bignsize =15 + 2 *len(collegesdict[j]) #College node size based on number of departments
     graph.add_node(j, size=bignsize, title=j, group = count) #Add nodes for the colleges
     for k in collegesdict[j]: #For each department within college j
-        hyperlink = "<a href="+depttagsdict[k][0]+">"+k+"</a>"
+        hyperlink = "<a href="+depttagsdict[k][0]+">View results for: "+k+"</a>"
         numresults = depttagsdict[k][1]
-        smallnsize = 10
+        smallnsize = 7
         if(numresults > 0):
-            smallnsize += 2 + 4*numpy.log(numresults)
-        graph.add_node(hyperlink, size=smallnsize, title="Results: "+str(depttagsdict[k][1]), group=count) #Create a node for the department. The " " prevents issues with departments/colleges with the same name
-        graph.add_edge(j,hyperlink, weight = 5) #Create an edge between the above department and its college
+            smallnsize += 3 + 1.5 * numpy.log(numresults) + numresults/150
+        titl = "\nNumber of results: "+str(depttagsdict[k][1])
+        graph.add_node(k + " ", size=smallnsize, title=hyperlink + titl, group=count) #Create a node for the department. The " " prevents issues with departments/colleges with the same name
+        graph.add_edge(j, k + " ", weight = 100) #Create an edge between the above department and its college
     count+=1 #Increment count
 purrnet.from_nx(graph) #Convert the networkx graph to the pyvis network
 purrnet.show("purrnet.html") #Create and show an html file with the pyvis network
