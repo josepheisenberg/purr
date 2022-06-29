@@ -1,103 +1,206 @@
-Department Tag,College,Number of PURR results
-Accounting,Krannert,0
-Career,Krannert,0
-Economics,Krannert,3
-Finance,Krannert,0
-Human Resources,Krannert,0
-Management Information Systems,Krannert,0
-Managerial Communications,Krannert,0
-Marketing,Krannert,0
-Organizational Behavior,Krannert,1
-Organizational Leadership & Supervision,Krannert,0
-Quantitative Methods,Krannert,0
-Strategic Management,Krannert,0
-Aeronautics and Astronautics Engineering,Engineering,9
-Chemical Engineering,Engineering,0
-Civil Engineering,Engineering,241
-Construction Engineering and Management,Engineering,77
-Electrical & Computer Engineering,Engineering,0
-Engineering Education,Engineering,20
-Environmental Engineering,Engineering,1
-Industrial Engineering,Engineering,7
-Mechanical Engineering,Engineering,17
-Nuclear Engineering,Engineering,4
-African-American Studies,Liberal Arts,0
-American Studies,Liberal Arts,0
-Anthropology,Liberal Arts,2
-Art and Design,Liberal Arts,1
-Asian American Studies,Liberal Arts,0
-Asian Studies,Liberal Arts,1
-Classical Studies,Liberal Arts,35
-Communication,Liberal Arts,5
-Comparative Literature,Liberal Arts,0
-Dance,Liberal Arts,0
-Film Studies (Motion Pictures),Liberal Arts,10
-History,Liberal Arts,2
-Humanities,Liberal Arts,0
-Interdisciplinary Research,Liberal Arts,2
-Jewish Studies,Liberal Arts,0
-Language and languages,Liberal Arts,0
-Law,Liberal Arts,1
-Linguistics,Liberal Arts,15
-Literature,Liberal Arts,1
-Medieval Studies,Liberal Arts,0
-Music,Liberal Arts,2
-Philosophy,Liberal Arts,78
-Political Science,Liberal Arts,6
-Religious Studies,Liberal Arts,1
-Sociology,Liberal Arts,4
-Theatre,Liberal Arts,0
-Women's Studies,Liberal Arts,7
-Agricultural Economics,Agriculture,10
-Agricultural Education,Agriculture,1
-Agricultural Extension,Agriculture,0
-Agriculture,Agriculture,197
-Agriculture - Biological Engineering,Agriculture,0
-Agronomy,Agriculture,83
-Animal Science,Agriculture,0
-Biochemistry,Agriculture,48
-Biomedical Engineering,Agriculture,31
-Botany,Agriculture,34
-Crop Science,Agriculture,146
-Entomology,Agriculture,9
-Food Science,Agriculture,1
-Forestry & Natural Resources,Agriculture,0
-Horticulture & Landscape Architecture,Agriculture,0
-Plant Pathology,Agriculture,34
-Soil Science,Agriculture,133
-Aviation Technology,Polytechnic,13
-Building Construction Management,Polytechnic,87
-Computer Graphics Technology,Polytechnic,2
-Computers,Polytechnic,0
-Military Science,Polytechnic,1
-Bioinformatics,Science,13
-Chemistry,Science,26
-Computer Science,Science,268
-Earth and Atmospheric Sciences,Science,17
-Mathematics,Science,266
-Molecular Biosciences,Science,11
-Physics,Science,23
-Statistics,Science,4
-Consumer Science -Consumer Research,HHS,0
-Family Studies,HHS,2
-Health & Kinesiology,HHS,0
-Health Sciences,HHS,3
-Hearing,HHS,1
-Hospitality & Tourism Management,HHS,0
-Life Sciences,HHS,4
-Nursing,HHS,2
-Nutrition,HHS,2
-Psychological Sciences,HHS,0
-Speech,HHS,1
-Tourism,HHS,0
-Data Curation,Libraries,0
-Geographic Information Systems (GIS),Libraries,58
-Library Science,Libraries,11
-Education,Education,16
-Entrepreneurship,Morgan,6
-Social Entrepreneurship,Morgan,0
-Homeland Security,Homeland Security,0
-Medicinal Chemistry,Pharmacy,0
-Molecular Pharmacology,Pharmacy,0
-Pharmacy,Pharmacy,0
-Veterinary Medicine,Vet Med,0
+Department Tag,College,Number of PURR results
+
+Accounting,Krannert,0
+
+Career,Krannert,0
+
+Economics,Krannert,3
+
+Finance,Krannert,0
+
+Human Resources,Krannert,0
+
+Management Information Systems,Krannert,0
+
+Managerial Communications,Krannert,0
+
+Marketing,Krannert,0
+
+Organizational Behavior,Krannert,1
+
+Organizational Leadership & Supervision,Krannert,0
+
+Quantitative Methods,Krannert,0
+
+Strategic Management,Krannert,0
+
+Aeronautics and Astronautics Engineering,Engineering,9
+
+Chemical Engineering,Engineering,0
+
+Civil Engineering,Engineering,241
+
+Construction Engineering and Management,Engineering,77
+
+Electrical & Computer Engineering,Engineering,0
+
+Engineering Education,Engineering,20
+
+Environmental Engineering,Engineering,1
+
+Industrial Engineering,Engineering,7
+
+Mechanical Engineering,Engineering,17
+
+Nuclear Engineering,Engineering,4
+
+African-American Studies,Liberal Arts,0
+
+American Studies,Liberal Arts,0
+
+Anthropology,Liberal Arts,2
+
+Art and Design,Liberal Arts,1
+
+Asian American Studies,Liberal Arts,0
+
+Asian Studies,Liberal Arts,1
+
+Classical Studies,Liberal Arts,35
+
+Communication,Liberal Arts,5
+
+Comparative Literature,Liberal Arts,0
+
+Dance,Liberal Arts,0
+
+Film Studies (Motion Pictures),Liberal Arts,10
+
+History,Liberal Arts,2
+
+Humanities,Liberal Arts,0
+
+Interdisciplinary Research,Liberal Arts,2
+
+Jewish Studies,Liberal Arts,0
+
+Language and languages,Liberal Arts,0
+
+Law,Liberal Arts,1
+
+Linguistics,Liberal Arts,15
+
+Literature,Liberal Arts,1
+
+Medieval Studies,Liberal Arts,0
+
+Music,Liberal Arts,2
+
+Philosophy,Liberal Arts,78
+
+Political Science,Liberal Arts,6
+
+Religious Studies,Liberal Arts,1
+
+Sociology,Liberal Arts,4
+
+Theatre,Liberal Arts,0
+
+Women's Studies,Liberal Arts,7
+
+Agricultural Economics,Agriculture,10
+
+Agricultural Education,Agriculture,1
+
+Agricultural Extension,Agriculture,0
+
+Agriculture,Agriculture,197
+
+Agriculture - Biological Engineering,Agriculture,0
+
+Agronomy,Agriculture,83
+
+Animal Science,Agriculture,0
+
+Biochemistry,Agriculture,48
+
+Biomedical Engineering,Agriculture,31
+
+Botany,Agriculture,34
+
+Crop Science,Agriculture,146
+
+Entomology,Agriculture,9
+
+Food Science,Agriculture,1
+
+Forestry & Natural Resources,Agriculture,0
+
+Horticulture & Landscape Architecture,Agriculture,0
+
+Plant Pathology,Agriculture,34
+
+Soil Science,Agriculture,133
+
+Aviation Technology,Polytechnic,13
+
+Building Construction Management,Polytechnic,87
+
+Computer Graphics Technology,Polytechnic,2
+
+Computers,Polytechnic,0
+
+Military Science,Polytechnic,1
+
+Bioinformatics,Science,13
+
+Chemistry,Science,26
+
+Computer Science,Science,268
+
+Earth and Atmospheric Sciences,Science,17
+
+Mathematics,Science,266
+
+Molecular Biosciences,Science,11
+
+Physics,Science,23
+
+Statistics,Science,4
+
+Consumer Science -Consumer Research,HHS,0
+
+Family Studies,HHS,2
+
+Health & Kinesiology,HHS,0
+
+Health Sciences,HHS,3
+
+Hearing,HHS,1
+
+Hospitality & Tourism Management,HHS,0
+
+Life Sciences,HHS,4
+
+Nursing,HHS,2
+
+Nutrition,HHS,2
+
+Psychological Sciences,HHS,0
+
+Speech,HHS,1
+
+Tourism,HHS,0
+
+Data Curation,Libraries,0
+
+Geographic Information Systems (GIS),Libraries,58
+
+Library Science,Libraries,11
+
+Education,Education,16
+
+Entrepreneurship,Morgan,6
+
+Social Entrepreneurship,Morgan,0
+
+Homeland Security,Homeland Security,0
+
+Medicinal Chemistry,Pharmacy,0
+
+Molecular Pharmacology,Pharmacy,0
+
+Pharmacy,Pharmacy,0
+
+Veterinary Medicine,Vet Med,0
+
