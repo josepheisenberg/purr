@@ -8,6 +8,7 @@ import streamlit.components.v1 as components
 from bs4 import BeautifulSoup as soup
 import requests
 import regex
+import webbrowser
 
 #This file creates a network connecting Purdue Colleges to the research subjects
 #related to these colleges and PURR datasets related to these subjects. 
@@ -16,7 +17,7 @@ import regex
 purrnet = Network(height="1000px", width="100%", font_color="black",heading='Departments of each college')
 #Create a pyvis network named purrnet
 
-info = pd.read_excel("PURRSubjectTags_wColleges.xlsx") #Read info from an excel sheet
+info = pd.read_excel("edited_PURRSubjectTags_wColleges.xlsx") #Read info from an excel sheet
 numpyinfo = info.to_numpy() #Convert info to a numpy array
 collegesdict = dict() #Create a dictionary where colleges will be the keys and departments the items
 for i in numpyinfo:
@@ -68,3 +69,5 @@ purrnet.show("purrnet.html") #Create and show an html file with the pyvis networ
 HtmlFile = open("purrnet.html", 'r', encoding='utf-8')
 source_code = HtmlFile.read() 
 components.html(source_code, height = 1000, width = 1000)
+
+webbrowser.open_new_tab("purrnet.html")
